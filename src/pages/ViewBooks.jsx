@@ -5,7 +5,7 @@ import { toast } from 'react-toastify'
 
 const ViewBooks = () => {
     const [books, setBooks]= useState([])
-    
+
     const fetchBooks= async()=>{
       try {
         const res= await fetch('http://localhost:3000/api/books')
@@ -45,7 +45,7 @@ const ViewBooks = () => {
                 key={book.id}
                 className="flex items-center m-2 border-b border-gray-300 last:border-b-0 py-3"
             >
-              <Link to={`/books/${book.id}`} className='hover:underline'>{book.title}</Link>
+              <Link to={`/books/${book.id}`} className='hover:underline text-xl hover:text-gray-500'>{book.title}</Link>
               <div className="ml-auto space-x-4 flex">
                 <Link to={`/books/edit/${book.id}`} className="text-xl">
                   <FaEdit />
