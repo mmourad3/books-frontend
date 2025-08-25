@@ -5,7 +5,7 @@ const AddBook = () => {
     const [title, setTitle]= useState("");
   const [author, setAuthor]= useState("");
   const [published, setPublished]= useState("");
-  const [description, setDescription]= useState(null);
+  const [description, setDescription]= useState("");
   const navigate= useNavigate();
 
   const handleSubmit= async (e) => {
